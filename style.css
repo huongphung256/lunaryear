@@ -1,0 +1,152 @@
+@font-face {
+    src: url(Cubano-Font/Cubano/webfonts/cubano-regular-webfont.ttf);
+    font-family: "Cubano-Regular";
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cubano-Regular;
+}
+html, body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient( 135deg, #FF7AF5 10%, #513162 100%);
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.hny2020 {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.hny2020 .heading {
+    width: 100%;
+    height: 150px;
+}
+.hny2020 .heading #heading2020 {
+    width: 100%;
+    height: 100%;
+    font-size: 100px;
+    color: #2f3542;
+    text-transform: uppercase;
+    text-shadow: 0px 6px 6px rgb(0, 0, 0, 0.8);
+}
+.hny2020 .content {
+    width: 100%;
+    height: calc(100% - 150px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.hny2020 .content .day, .hours, .minutes, .seconds {
+    width: 220px;
+    height: 300px;
+    text-align: center;
+}
+.hny2020 .content #bubble {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+.hny2020 .content #bubble span {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.hny2020 .content #bubble:hover span {
+    border: none;
+    background-color: rgba(33, 33, 226, 0.5);
+}
+.hny2020 .content #bubble span:nth-child(1) {
+    border-radius: 30% 31% 39% 38% / 40% 46% 49% 52%;
+    animation: animate 2s ease infinite;
+}
+span:nth-child(2) {
+    border-radius: 30% 39% 43% 29% / 46% 55% 45% 62%;
+    animation: animate 4s ease infinite;
+}
+span:nth-child(3) {
+    border-radius: 55% 39% 59% 68% / 48% 46% 44% 57%;
+    animation: animate 6s ease infinite;
+}
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.hny2020 .content .value {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 110px;
+    z-index: 1000;
+}
+.hny2020 .content .button {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(0, 0, 0, 0.8);
+    border-radius: 23% 34% 33% 39% / 30% 44% 41% 38%;
+    margin: 20px 0px 0px 0px;
+    box-shadow: 0px 4px 3px rgb(0, 0, 0, .4);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.hny2020 .content .button:hover {
+    background-color: rgb(0, 0, 0, .85);
+    box-shadow: 0px 5px 4px rgb(0, 0, 0, .4);
+}
+.hny2020 .content .button:hover h4 {
+    color: #cacaca;
+}
+.hny2020 .content .button h4 {
+    font-size: 24px;
+    color: #212329;
+    transition: 0.5s;
+}
+@media screen and (max-width: 1100px) {
+    .hny2020 .heading {
+        height: 100px;
+    }
+    .hny2020 .heading #heading2020 {
+        font-size: 60px;
+    }
+    .hny2020 .content {
+        height: calc(100% - 100px);
+    }
+    .hny2020 .content .day, .hours, .minutes, .seconds {
+        width: 120px;
+        height: 180px;
+    }
+    .hny2020 .content #bubble {
+        height: 120px;
+    }
+    .hny2020 .content .button {
+        height: 40px;
+    }
+    .hny2020 .content .button h4 {
+        font-size: 17px;
+    }
+    .hny2020 .content .value {
+        font-size: 70px;
+    }
+}
