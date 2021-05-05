@@ -2,7 +2,7 @@ var day = document.querySelector(".time-day");
 var hours = document.querySelector(".time-hours");
 var minutes = document.querySelector(".time-minutes");
 var seconds = document.querySelector(".time-seconds");
-var time = new Date("Jan 25 2020").getTime();
+var time = new Date("February 1 2022").getTime();
 function setupTime() {
     var today = new Date().getTime();
     var result = Math.abs(time - today);
